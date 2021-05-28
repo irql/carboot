@@ -22,4 +22,4 @@ echo detach vdisk >> wrvhd
 diskpart /s "%cd%\wrvhd"
 del wrvhd
 
-qemu-system-x86_64 -m 1024 -monitor stdio -d int -no-shutdown -no-reboot -accel hax -hda "%cd%\boot.vhd"
+qemu-system-x86_64 -m 1024 -monitor stdio -no-shutdown -no-reboot -hda "%cd%\boot.vhd"

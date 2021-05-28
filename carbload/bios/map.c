@@ -162,6 +162,7 @@ BdInitMap(
     } while ( BiosFrame.Ebx != 0 );
 
     BdReserveRegion( 0, 0x100000 );
+    // could cause an issue if it is outside the 0x200000 range.
     BaseReserve = BdClosestLogical( 0x100000, 0x5000 );
     BdReserveRegion( BaseReserve, 0x5000 );
 
