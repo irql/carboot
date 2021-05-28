@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1401
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "carbload", "carbload\carbload.vcxproj", "{BE6CBE06-016A-4C65-8EB8-D8C7422CC2C1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "carbefi", "carbefi\carbefi.vcxproj", "{93F8545D-C42B-40A7-A2F4-924E5767AE3C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "carblegacy", "carblegacy", "{B7F38E44-CF8B-4095-AE9F-FD463661FEBE}"
+	ProjectSection(SolutionItems) = preProject
+		carblegacy\disk.asm = carblegacy\disk.asm
+		carblegacy\fat32.asm = carblegacy\fat32.asm
+		carblegacy\load.asm = carblegacy\load.asm
+		carblegacy\pe32.asm = carblegacy\pe32.asm
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		build|x86_32 = build|x86_32
+		build|x86_64 = build|x86_64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE6CBE06-016A-4C65-8EB8-D8C7422CC2C1}.build|x86_32.ActiveCfg = build|Win32
+		{BE6CBE06-016A-4C65-8EB8-D8C7422CC2C1}.build|x86_32.Build.0 = build|Win32
+		{BE6CBE06-016A-4C65-8EB8-D8C7422CC2C1}.build|x86_64.ActiveCfg = build|Win32
+		{BE6CBE06-016A-4C65-8EB8-D8C7422CC2C1}.build|x86_64.Build.0 = build|Win32
+		{93F8545D-C42B-40A7-A2F4-924E5767AE3C}.build|x86_32.ActiveCfg = build|x64
+		{93F8545D-C42B-40A7-A2F4-924E5767AE3C}.build|x86_64.ActiveCfg = build|x64
+		{93F8545D-C42B-40A7-A2F4-924E5767AE3C}.build|x86_64.Build.0 = build|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1A717AD0-6ACD-40DC-B8BF-EAF7672F30AC}
+	EndGlobalSection
+EndGlobal

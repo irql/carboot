@@ -1,0 +1,8 @@
+*.suo
+*.user
+
+x64/
+x86/
+
+.vs/
+boot.vhd
