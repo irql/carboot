@@ -245,7 +245,8 @@ LdrLoadSystemModule(
 
     HeaderNt = ( PIMAGE_NT_HEADERS )( ( ULONG32 )BootFile->BaseAddress + HeaderDos->e_lfanew );
 
-    if ( HeaderNt->Signature != IMAGE_NT_SIGNATURE ) {
+    if ( HeaderNt->Signature != IMAGE_NT_SIGNATURE ||
+         HeaderNt->FileHeader.Machine != IMAGE_FILE_MACHINE_AMD64 ) {
 
         return STATUS_INVALID_IMAGE;
     }
@@ -305,8 +306,8 @@ LdrLoadSystemModule(
 
                 ntStatus = LdrLoadSystemModule( BootRecord,
                                                 ImportFile,
-                                                Loader.MapList[ CurrentMap ].BaseAddress +
-                                                Loader.MapList[ CurrentMap ].Length );
+                                                Loader.MapList[ Loader.MapCount - 1 ].BaseAddress +
+                                                Loader.MapList[ Loader.MapCount - 1 ].Length );
 
                 if ( !NT_SUCCESS( ntStatus ) ) {
 
