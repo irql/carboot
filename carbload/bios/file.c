@@ -61,8 +61,6 @@ BdFindSystemFile(
 
     BdFatName( Name, FileName );
 
-    BpDisplayString( "BdFatName: %s\n", FileName );
-
     *Map = NULL;
 
     for ( CurrentMap = 0; CurrentMap < Loader.MapCount; CurrentMap++ ) {
@@ -75,7 +73,7 @@ BdFindSystemFile(
         if ( RtlCompareAnsiString( FileName,
                                    Loader.MapList[ CurrentMap ].BootFile->FileName,
                                    1 ) == 0 ) {
-            BpDisplayString( "BdFatName: %s %lx\n", FileName, Loader.MapList[ CurrentMap ].BaseAddress );
+
             *Map = &Loader.MapList[ CurrentMap ];
             return;
         }
